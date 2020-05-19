@@ -9,7 +9,7 @@
 >zfs create pool0/data4  
 
 #### Устанавливаем тип сжатия для созданных файловых систем:
->zfs set compression=gzip pool0/data1  
+>zfs set compression=lzjb pool0/data1  
 >zfs set compression=gzip-9 pool0/data2  
 >zfs set compression=zle pool0/data3  
 >zfs set compression=lz4 pool0/data4  
