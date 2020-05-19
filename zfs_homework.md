@@ -1,4 +1,4 @@
-###Задание 1
+### Задание 1
 
 #### Создаём пул pool0 на sdb
 >zpool create pool0 sdb  
@@ -31,7 +31,7 @@
 
 
 
-###Задание 2
+### Задание 2
 #### Восстановление пула
 wget --no-check-certificate -O file.tar.gz 'https://drive.google.com/u/0/uc?id=1KRBNW33QWqbvbVHa3hLJivOAt60yukkg&export=download'  
 >tar -xvf file.tar.gz  
@@ -40,20 +40,20 @@ wget --no-check-certificate -O file.tar.gz 'https://drive.google.com/u/0/uc?id=1
 >sudo zpool import -d ./ otus  
 
 
-####Контрольная сумма
+#### Контрольная сумма
 >[vagrant@lvm otus]$ zfs get checksum  
 >NAME            PROPERTY  VALUE      SOURCE  
 >otus            checksum  sha256     local  
 >otus/hometask2  checksum  sha256     inherited from otus  
 
 
-####Размер recordsize
+#### Размер recordsize
 >[vagrant@lvm otus]$ zfs get recordsize /otus  
 >NAME  PROPERTY    VALUE    SOURCE  
 >otus  recordsize  128K     local  
 
 
-####Тип и степень сжатия
+#### Тип и степень сжатия
 >[vagrant@lvm otus]$ zfs get compression,compressratio  
 NAME            PROPERTY       VALUE     SOURCE  
 >otus            compression    zle       local  
@@ -82,7 +82,7 @@ NAME            PROPERTY       VALUE     SOURCE
 
 
 
-###Задание 3
+### Задание 3
 
 >wget --no-check-certificate -O otus_task2.file 'https://drive.google.com/u/0/uc?id=1gH8gCL9y7Nd5Ti3IRmplZPF1XjzxeRAG&export=download'  
 >zfs receive otus/task2 < otus_task2.file  
