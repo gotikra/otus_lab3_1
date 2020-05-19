@@ -55,9 +55,9 @@
 
 ### Задание 2
 #### Версия zfs
->zfs version
->zfs-0.8.4-1
->zfs-kmod-0.8.4-1
+>zfs version  
+>zfs-0.8.4-1  
+>zfs-kmod-0.8.4-1  
 
 #### Восстановление пула
 wget --no-check-certificate -O file.tar.gz 'https://drive.google.com/u/0/uc?id=1KRBNW33QWqbvbVHa3hLJivOAt60yukkg&export=download'  
