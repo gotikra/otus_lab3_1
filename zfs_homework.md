@@ -29,9 +29,36 @@
 >1185	/pool0/data3/War_and_Peace.txt
 >1185	/pool0/data4/War_and_Peace.txt
 
+#### Тип и степень сжатия
+>zfs get compression,compressratio
+>NAME              PROPERTY       VALUE     SOURCE
+>otus              compression    zle       local
+>otus              compressratio  1.23x     -
+>otus/hometask2    compression    zle       inherited from otus
+>otus/hometask2    compressratio  1.00x     -
+>otus/task2        compression    zle       inherited from otus
+>otus/task2        compressratio  1.32x     -
+>otus/task2@task2  compression    -         -
+>otus/task2@task2  compressratio  1.32x     -
+>pool0             compression    on        local
+>pool0             compressratio  1.07x     -
+>pool0/data1       compression    lzjb      local
+>pool0/data1       compressratio  1.07x     -
+>pool0/data2       compression    gzip-9    local
+>pool0/data2       compressratio  1.08x     -
+>pool0/data3       compression    zle       local
+>pool0/data3       compressratio  1.08x     -
+>pool0/data4       compression    lz4       local
+>pool0/data4       compressratio  1.08x     -
+
 
 
 ### Задание 2
+#### Версия zfs
+>zfs version
+>zfs-0.8.4-1
+>zfs-kmod-0.8.4-1
+
 #### Восстановление пула
 wget --no-check-certificate -O file.tar.gz 'https://drive.google.com/u/0/uc?id=1KRBNW33QWqbvbVHa3hLJivOAt60yukkg&export=download'  
 >tar -xvf file.tar.gz  
